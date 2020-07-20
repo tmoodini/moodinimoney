@@ -23,7 +23,7 @@ public class Main {
 		v1.addTransaction(t1);
 		v1.printBalance();
 		
-		Transaction t2 = new Transaction("Mortgage", new BigDecimal(-100), LocalDate.now(), 
+		Transaction t2 = new Transaction("Mortgage", new BigDecimal(0), LocalDate.now(), 
 				new BigDecimal(-100), new BigDecimal(0), "Mortgage", "OneTime");
 		
 		v1.addTransaction(t2);

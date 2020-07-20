@@ -49,9 +49,20 @@ public class Account {
 	
 	public void printBalance() {
 		System.out.println("Account: " + this.getAccountName() + 
-				" Balance: " + this.currentBalance.doubleValue() + " Pending " + this.transactionsPending.doubleValue());
+				" Budget: " + this.budgetAmount.doubleValue() + 
+				" Balance: " + this.currentBalance.doubleValue() +
+				" Pending " + this.transactionsPending.doubleValue());
 	}
 	
+	public BigDecimal getCurrentPlusPending() {
+		
+		return this.currentBalance.add(transactionsPending);
+	}
+	
+	public BigDecimal getTotalBudget() {
+		
+		return this.budgetAmount;
+	}
 	
 	public String getAccountName() {
 		return accountName;
